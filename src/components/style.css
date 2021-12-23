@@ -1,0 +1,214 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Varela', sans-serif;
+}
+/* **********navbar start****************** */
+nav{
+    width: 100%;
+    height: 10vh;
+    position: relative; 
+    display: flex;
+  padding: 1rem 1.5rem;
+    box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.555);
+}
+a{
+    text-decoration: none;
+}
+#logo{
+font-size: 1.5rem;
+font-weight: 600;
+color: black;
+margin:rem;
+}
+#logo img{
+    margin-left: 5px;
+    object-fit: contain;
+}
+#sidebar{
+    display: none;
+}
+.navbar-nav{
+display: flex;
+position: absolute;
+left: 15%;
+}
+.nav-item{
+    list-style: none;
+    margin:0 1.2rem;
+}
+.nav-link{
+    color: black;
+    font-size: 1.1rem;
+}
+.nav-link:hover{
+    color: #00c805;
+    transition: 0.3s;
+}
+.fa-chevron-down{
+    font-size: 0.8rem;
+    padding-left: 0.8rem;
+}
+.register{
+    position: absolute;
+    right: 1.8rem;
+}
+.register a{
+ margin:0rem 1rem;
+ font-size: 1.1rem;
+ font-weight: bold;
+ color: black;
+} 
+.sign{
+ padding:0.5rem 2rem;
+ border-radius: 40px;
+ padding-bottom: 1rem;
+   background-color: #08e00f;
+   text-align: center;
+}
+.log:hover{
+    color: #00c805;
+}
+.sign:hover{
+    background-color: rgb(100, 201, 0);
+}
+/* *********landing page start******************* */
+.main-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(195,245,60,255);
+    display: flex;
+}
+.container1{
+    width: 50%;
+    padding: 6rem 4rem;
+}
+.main-heading{
+    font-size: 3rem;
+    /* padding: 1rem 0; */
+}
+.cotent-para{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    padding: 1.5rem 0;
+}
+.sign-btn{
+    background-color: black;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 40px;
+    border: none;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+.sign-btn:hover{
+    background-color: rgb(71, 71, 71);
+    transition: 0.3s;
+}
+#notice{
+   font-size: 1.2rem; 
+   font-weight: 600;
+   padding: 0 1rem;
+   color: black;
+}
+#notice i{
+    font-size: 1.6rem;
+    padding-right: 0.6rem;
+}
+#notice:hover{
+    color: #00c805;
+}
+.container2{
+    width: 50%;
+    height: auto;
+    padding: 2rem 8rem 0 0rem;
+}
+.container2 img{
+    width: auto;
+    height:90%;
+}
+
+/* *********responsive *********************** */
+@media screen and (max-width:480px) {
+    nav{
+        min-height: 6vh; 
+    }
+     .sidebarlevel{
+        width:50px ;height: 40px;
+        position: absolute;
+        z-index: 9999;
+        right: 8%;
+    }
+    .bar{
+        width: 35px;
+        background: black;
+        height: 4px;  margin: 8px 0;
+        transition: 0.5s all;
+    } 
+    #sidebar:checked ~ .sidebarlevel>.bar1{
+      transform: rotate(135deg);
+      margin-top: 10px;
+    }
+    #sidebar:checked ~ .sidebarlevel>.bar2{
+        transform: rotate(-135deg);
+        margin-top: -11px;
+      }
+    .navbar-nav{
+        flex-direction: column;
+        width: 100%; height: 100vh;
+        padding-top: 4rem;
+        background-color: rgb(255, 255, 255);
+        left: 0;
+        top: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+    }
+   #sidebar:checked ~ .navbar-nav{
+      transform: translateX(0%);
+   }
+    .nav-item{
+        margin:0.5rem 0.8rem;
+        background-color: rgba(231, 231, 231, 0.384);
+        padding: 1rem;
+        max-width: 90%;
+    }
+    .fa-chevron-down{
+        position: relative;
+        left:11rem;
+        padding: 0;
+    }
+    .register{
+        display: none;
+    }
+    
+    /* *********landing page start******************* */
+    .main-container{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .container1{
+        width: 100%;
+        padding: 3rem 1rem;
+        font-size: 1rem;
+    }
+    .main-heading{
+        font-size: 2.5rem;
+    }
+    .sign-btn{
+       display: none;
+    }
+    #notice{
+       font-size: 1rem; 
+       padding: 0rem;
+    }
+    .container2{
+        width: 100%;
+        height: auto;
+        padding:1rem;
+    }
+    .container2 img{
+        width: 100%;
+        height:90%;
+    }
+}
